@@ -4,11 +4,31 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Poké-Project</title>
+    <link rel="stylesheet" href="/src/style.css">
   </head>
   <body>
-    <div id="app"></div>
-    
+    <main>
+    <h1>Pokémon Explorer</h1>
+    <div class="zoekbalk">
+      <input type="text" id="zoek-input" placeholder="Zoek Pokémon..." />
+      <select id="filter-select">
+        <option value="alle">Alle</option>
+        <option value="Favorieten">Favorieten</option>
+        <!-- eventuele andere filters -->
+      </select>
+      <button id="zoekknop">Zoeken</button>
+    </div>
+
+    <div class="pokemon-lijst" id="pokemon-lijst">
+      <!-- Voorbeeldlijst -->
+       <li>
+        <ul>Bulbasaur</ul>
+        <ul>Ivysaur</ul>
+       </li>
+    </div>
+    </main>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
