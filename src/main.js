@@ -22,3 +22,15 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+//Testje of de data in de console wordt gezet
+import { fetchPokemonData } from '/api/pokeapi.js';
+async function testFetchData() {
+  try {
+    const pokemon = await fetchPokemonData(0, 10);
+    console.log(pokemon);
+  } catch (error) {
+    console.error("Er is een fout opgetreden:", error);
+  }
+}
+testFetchData();
