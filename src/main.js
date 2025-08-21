@@ -78,7 +78,9 @@ function renderFavorieten(pokemons) {
           ♥
         </button>
         <img src="${pokemon.sprite}" alt="${pokemon.name}">
-        <h3>${pokemon.name}</h3>
+        <img src="${pokemon.sprite2}" alt="${pokemon.name}">
+        <h3 class="kenmerkfavo">ID: ${pokemon.id}</h3>
+        <h3 class="kenmerkfavo">Naam: ${pokemon.name}</h3>
       </div>
     </div>
   `).join('');
@@ -123,6 +125,12 @@ async function geefPokemonWeer() {
      style="color: ${favorieten.includes(pokemon.id) ? 'red' : 'grey'}">♥</button>
       <img src="${pokemon.sprite}" alt="${pokemon.name}">
       <img src="${pokemon.sprite2}" alt="${pokemon.name}">
+      <h3 class="kenmerkjs">ID: ${pokemon.id}</h3>
+      <h3 class="kenmerkjs">Naam: ${pokemon.name}</h3>
+      <h3 class="kenmerkjs">Type 1: ${pokemon.type1}</h3>
+      <h3 class="kenmerkjs">Type 2: ${pokemon.type2 || "none"}</h3>
+      <h3 class="kenmerkjs">Base Stats: ${pokemon.basestats}</h3>
+      <h3 class="kenmerkjs">Ability: ${pokemon.ability}</h3>
       <h3>${pokemon.id}</h3>
       <h3>${pokemon.name}</h3>
       <h3>${pokemon.type1}</h3>

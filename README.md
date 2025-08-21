@@ -10,6 +10,7 @@ HTML5, CSS3 en JavaScript
 - Cursus Web Essentials (Erasmushogeschool)
 - Cursus Programming Essentials I (Erasmushogeschool)
 - Cursus Web Advanced (Erasmushogeschool)
+- Bron Poké Ball afbeelding: https://pokemon-fano.fandom.com/wiki/Poke_Ball?file=Poke_Ball.png
 - Bron voor het ophalen van de Pokémon gegevens: https://pokeapi.co/
 - Info over async functions: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
 - Info over eventlisteners: https://www.w3schools.com/js/js_htmldom_eventlistener.asp
