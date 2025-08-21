@@ -95,6 +95,7 @@ async function geefPokemonWeer() {
   const pokemonLijstContainer = document.getElementById('pokemon-lijst');
   const zoekbalk = document.getElementById('zoek-input');
   const typeFilter = document.getElementById('type-filter');
+  const baseStatsFilter = document.getElementById('baseStatsFilter');
 
   // Data ophalen
   const pokemonDetailsPromises = pokemonLijst.map(async (pokemon) => {
@@ -151,6 +152,7 @@ async function geefPokemonWeer() {
   function applyFilters() {
     const term = zoekbalk.value.toLowerCase();
     const selectedType = typeFilter.value;
+    const selectedBaseStats = baseStatsFilter.value;
 
     const gefilterd = pokemonDetails.filter(pokemon => {
       const matchName = pokemon.name.toLowerCase().includes(term);
@@ -159,7 +161,14 @@ async function geefPokemonWeer() {
         pokemon.type1 === selectedType ||
         pokemon.type2 === selectedType;
 
-      return matchName && matchType;
+      let matchBaseStats = true;
+            if (selectedBaseStats) {
+              const [min, max] = selectedBaseStats.split('-').map(Number);
+              matchBaseStats = pokemon.basestats >= min && pokemon.basestats <= max;
+            }
+
+
+      return matchName && matchType && matchBaseStats;
     });
 
     renderPokemons(gefilterd);
@@ -171,5 +180,6 @@ async function geefPokemonWeer() {
   // Eventlisteners
   zoekbalk.addEventListener('input', applyFilters);
   typeFilter.addEventListener('change', applyFilters);
+  baseStatsFilter.addEventListener('change', applyFilters);
 }
 geefPokemonWeer();

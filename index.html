@@ -18,15 +18,15 @@
     </div>
     <div class="zoekbalk">
       <input type="text" id="zoek-input" placeholder="Zoek Pokémon..." />
-      <select id="filter-select">
-        <option value="Base stats">Base stats</option>
-        <option value="">0-100</option>
-        <option value="">101-200</option>
-        <option value="">201-300</option>
-        <option value="">301-400</option>
-        <option value="">401-500</option>
-        <option value="">501-600</option>
-        <option value="">601-700</option>
+      <select id="baseStatsFilter">
+        <option value="">Alle base stats</option>
+        <option value="0-100">0-100</option>
+        <option value="101-200">101-200</option>
+        <option value="201-300">201-300</option>
+        <option value="301-400">301-400</option>
+        <option value="401-500">401-500</option>
+        <option value="501-600">501-600</option>
+        <option value="601-700">601-700</option>
       </select>
       <select id="type-filter">
         <option value="">Alle types</option>
@@ -58,6 +58,7 @@
 
         <div class="pokemon-kaart">
         <h2>Alle Pokémon</h2>
+        <div class="sticky">
         <div class="pokemon-kaartinfo">
           <h3 class="kenmerk">Add ♥</h3>
           <h3 class="kenmerk">Normal</h3>
@@ -68,6 +69,7 @@
           <h3 class="kenmerk">Type 2</h3>
           <h3 class="kenmerk">Base stats</h3>
           <h3 class="kenmerk">Ability</h3>
+          </div>
         </div>
 
     <div class="pokemon-lijst" id="pokemon-lijst">

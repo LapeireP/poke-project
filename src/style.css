@@ -75,7 +75,7 @@ input::placeholder{
   color: var(--knoppentekstkleur);
 }
 
-#filter-select, #zoekknop {
+#baseStatsFilter, #zoekknop {
   padding: 1em;
   font-size: 1rem;
   background-color: var(--knoppen);
@@ -90,6 +90,7 @@ input::placeholder{
   justify-content: center;
   align-items: center;
   margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 /* Einde hoofding */
@@ -119,6 +120,14 @@ input::placeholder{
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+.sticky {
+  background-color: var(--kenmerkenbalkkleur);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-radius: 0.5em;
 }
 
 .pokemon-kaart img {
@@ -163,6 +172,7 @@ div>img {
   --knoppen: #ffffffa9;
   --kaartbutton-kleur: #ffd737;
   --knoppentekstkleur: rgb(0, 0, 0);
+  --kenmerkenbalkkleur: rgb(228, 161, 161);
 }
 
 
@@ -173,6 +183,7 @@ div>img {
   --knoppen: rgba(108, 108, 108, 0.647);
   --kaartbutton-kleur: #ffd7377c;
   --knoppentekstkleur: rgb(255, 255, 255);
+  --kenmerkenbalkkleur: rgb(78, 73, 73);
 }
 
 /* Einde thema switch */
