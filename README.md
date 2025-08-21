@@ -11,3 +11,11 @@ HTML5, CSS3 en JavaScript
 - Cursus Programming Essentials I (Erasmushogeschool)
 - Cursus Web Advanced (Erasmushogeschool)
 - Bron voor het ophalen van de Pokémon gegevens: https://pokeapi.co/
+- Info over async functions: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+- Info over eventlisteners: https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+- Info over includes methode: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
+- Info over filter methode: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+- Stappenplan maken van een filterlijst: https://www.w3schools.com/howto/howto_js_filter_lists.asp
+- Youtube filmpje over favorieten functionaliteit en localstorage: https://www.youtube.com/watch?v=DQ5VjITsmfg
+- Info over custom CSS properties: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
+- Youtube filmpje over het maken van een thema switch: https://www.youtube.com/watch?v=EORgld8vLrY

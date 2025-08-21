@@ -8,8 +8,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #b35757;
-  color: #333;
+  background-color: var(--achtergrond);
+  color: var(--tekst);
 }
 
 main {
@@ -23,8 +23,27 @@ h1 {
   margin-bottom: 20px;
 }
 
+h2 {
+  margin-bottom: 1em;
+}
+
 h3 {
   margin: 1em;
+}
+
+.instellingen {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#themaschakelaar {
+  padding: 0.5em;
+  font-size: 1rem;
+  background-color: var(--knoppen);
+}
+
+button, input, select {
+    border-radius: 0.5em;
 }
 
 /* Einde algemeen */
@@ -41,11 +60,21 @@ h3 {
   width: 60%;
   padding: 10px;
   font-size: 1rem;
+  background-color: var(--knoppen);
+}
+
+input::placeholder{
+  color: rgb(0, 0, 0);
 }
 
 #filter-select, #zoekknop {
-  padding: 10px;
+  padding: 1em;
   font-size: 1rem;
+  background-color: var(--knoppen);
+}
+
+#type-filter {
+  background-color: var(--knoppen);
 }
 
 /* Einde hoofding */
@@ -53,7 +82,16 @@ h3 {
 /* Start lijst Pokémon */
 
 .pokemon-kaart {
-  background-color: #ffffffa9;
+  background-color: var(--kaart-achtergrond);
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.favo {
+  background-color: var(--kaart-achtergrond);
   padding: 1em;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -74,7 +112,7 @@ h3 {
 }
 
 .pokemon-kaart button {
-  background-color: #ffd737;
+  background-color: var(--kaartbutton-kleur);
   border: 1px solid rgb(0, 0, 0);
   padding: 5px 10px;
   margin-top: 10px;
@@ -87,7 +125,6 @@ h3 {
 
 .favorietenknop {
   font-size: 1.3em;
-  color: rgb(255, 0, 0);
   border-radius: 0.2em;
 }
 
@@ -98,15 +135,23 @@ div>img {
 
 /* Einde lijst Pokémon */
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Begin thema switch */
+
+[data-theme="licht"] {
+  --achtergrond: #b35757;
+  --tekst: #333;
+  --kaart-achtergrond: #ffffffa9;
+  --knoppen: #ffffffa9;
+  --kaartbutton-kleur: #ffd737;
 }
+
+
+[data-theme="donker"] {
+  --achtergrond: #000000;
+  --kaart-achtergrond: #5249494b;
+  --tekst: rgb(55, 55, 73);
+  --knoppen: rgba(108, 108, 108, 0.647);
+  --kaartbutton-kleur: #ffd7377c;
+}
+
+/* Einde thema switch */

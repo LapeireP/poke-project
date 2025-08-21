@@ -9,13 +9,21 @@
   </head>
   <body>
     <main>
+    <div class="instellingen">
+    <button id="themaschakelaar">Wijzig thema</button>
+    </div>
     <h1>Pokémon Explorer</h1>
     <div class="zoekbalk">
       <input type="text" id="zoek-input" placeholder="Zoek Pokémon..." />
       <select id="filter-select">
-        <option value="alle">Alle</option>
-        <option value="Favorieten">Favorieten</option>
-        <!-- eventuele andere filters -->
+        <option value="Base stats">Base stats</option>
+        <option value="">0-100</option>
+        <option value="">101-200</option>
+        <option value="">201-300</option>
+        <option value="">301-400</option>
+        <option value="">401-500</option>
+        <option value="">501-600</option>
+        <option value="">601-700</option>
       </select>
       <select id="type-filter">
         <option value="">Alle types</option>
@@ -38,10 +46,15 @@
         <option value="fairy">Fairy</option>
         <option value="normal">Normal</option>
 </select>
-      <button id="zoekknop">Zoeken</button>
     </div>
 
-      <div class="pokemon-kaart">
+    <div class="favo">
+            <h2>Favorieten</h2>
+        <div id="favorieten-lijst"></div>
+        </div>
+
+        <div class="pokemon-kaart">
+        <h2>Alle Pokémon</h2>
         <div class="pokemon-kaartinfo">
           <h3>Add ♥</h3>
           <h3>Normal</h3>
@@ -50,7 +63,7 @@
           <h3>Name</h3>
           <h3>Type 1</h3>
           <h3>Type 2</h3>
-          <h3>Base</h3>
+          <h3>Base stats</h3>
           <h3>Ability</h3>
         </div>
 
