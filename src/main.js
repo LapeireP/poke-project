@@ -58,6 +58,39 @@ window.toggleFavoriet = function(pokemonId) {
   renderFavorieten(pokemonDetails);
 }
 
+  // Aanmaken pokemon-kaarten
+  function renderPokemons(pokemons) {
+  const pokemonLijstContainer = document.getElementById('pokemon-lijst');
+  const favorieten = getFavorieten();
+  pokemonLijstContainer.innerHTML = pokemons.map(pokemon => `
+    <div class="pokemon-kaart">
+    <div class="pokemon-kaartinfo">
+    <button class="favorietenknop" data-id="${pokemon.id}"
+     style="color: ${favorieten.includes(pokemon.id) ? 'red' : 'grey'}">♥</button>
+      <img src="${pokemon.sprite}" alt="${pokemon.name}">
+      <img src="${pokemon.sprite2}" alt="${pokemon.name}">
+      <h3 class="kenmerkjs">ID: ${pokemon.id}</h3>
+      <h3 class="kenmerkjs">Naam: ${pokemon.name}</h3>
+      <h3 class="kenmerkjs">Type 1: ${pokemon.type1}</h3>
+      <h3 class="kenmerkjs">Type 2: ${pokemon.type2 || "none"}</h3>
+      <h3 class="kenmerkjs">Base Stats: ${pokemon.basestats}</h3>
+      <h3 class="kenmerkjs">Ability: ${pokemon.ability}</h3>
+      <h3>${pokemon.id}</h3>
+      <h3>${pokemon.name}</h3>
+      <h3>${pokemon.type1}</h3>
+      <h3>${pokemon.type2 || "none"}</h3>
+      <h3>${pokemon.basestats}</h3>
+      <h3>${pokemon.ability}</h3>
+      </div>
+    </div>
+  `).join('');
+
+    //Eventlistener favorietenknoppen
+    pokemonLijstContainer.querySelectorAll('.favorietenknop').forEach(btn => {
+      btn.addEventListener('click', () => toggleFavoriet(Number(btn.dataset.id)));
+    });
+  }
+
 function renderFavorieten(pokemons) {
   const favorietenContainer = document.getElementById('favorieten-lijst');
   const favorieten = getFavorieten();
@@ -92,10 +125,11 @@ function renderFavorieten(pokemons) {
 
 async function geefPokemonWeer() {
   const pokemonLijst = await fetchPokemonData();
-  const pokemonLijstContainer = document.getElementById('pokemon-lijst');
   const zoekbalk = document.getElementById('zoek-input');
   const typeFilter = document.getElementById('type-filter');
   const baseStatsFilter = document.getElementById('baseStatsFilter');
+  const sorteerNaam = document.getElementById('sorteer-naam');
+  const sorteerBaseStats = document.getElementById('sorteer-baseStats');
 
   // Data ophalen
   const pokemonDetailsPromises = pokemonLijst.map(async (pokemon) => {
@@ -116,43 +150,13 @@ async function geefPokemonWeer() {
   // Promise
   pokemonDetails = await Promise.all(pokemonDetailsPromises);
 
-  // Aanmaken pokemon-kaarten
-  function renderPokemons(pokemons) {
-  const favorieten = getFavorieten();
-  pokemonLijstContainer.innerHTML = pokemons.map(pokemon => `
-    <div class="pokemon-kaart">
-    <div class="pokemon-kaartinfo">
-    <button class="favorietenknop" data-id="${pokemon.id}"
-     style="color: ${favorieten.includes(pokemon.id) ? 'red' : 'grey'}">♥</button>
-      <img src="${pokemon.sprite}" alt="${pokemon.name}">
-      <img src="${pokemon.sprite2}" alt="${pokemon.name}">
-      <h3 class="kenmerkjs">ID: ${pokemon.id}</h3>
-      <h3 class="kenmerkjs">Naam: ${pokemon.name}</h3>
-      <h3 class="kenmerkjs">Type 1: ${pokemon.type1}</h3>
-      <h3 class="kenmerkjs">Type 2: ${pokemon.type2 || "none"}</h3>
-      <h3 class="kenmerkjs">Base Stats: ${pokemon.basestats}</h3>
-      <h3 class="kenmerkjs">Ability: ${pokemon.ability}</h3>
-      <h3>${pokemon.id}</h3>
-      <h3>${pokemon.name}</h3>
-      <h3>${pokemon.type1}</h3>
-      <h3>${pokemon.type2 || "none"}</h3>
-      <h3>${pokemon.basestats}</h3>
-      <h3>${pokemon.ability}</h3>
-      </div>
-    </div>
-  `).join('');
-
-    //Eventlistener favorietenknoppen
-    pokemonLijstContainer.querySelectorAll('.favorietenknop').forEach(btn => {
-      btn.addEventListener('click', () => toggleFavoriet(Number(btn.dataset.id)));
-    });
-  }
-
-  // Filterfunctie (zoek + type)
+  // Filterfunctie (zoekfunctie + typefilter + basestatsfilter + sorteer op naam + sorteer op basestats)
   function applyFilters() {
     const term = zoekbalk.value.toLowerCase();
     const selectedType = typeFilter.value;
     const selectedBaseStats = baseStatsFilter.value;
+    const selectedSorteerNaam = sorteerNaam.value;
+    const selectedSorteerBaseStats = sorteerBaseStats.value;
 
     const gefilterd = pokemonDetails.filter(pokemon => {
       const matchName = pokemon.name.toLowerCase().includes(term);
@@ -171,6 +175,20 @@ async function geefPokemonWeer() {
       return matchName && matchType && matchBaseStats;
     });
 
+    //Sorteerfunctie op naam
+    if (selectedSorteerNaam === "az") {
+    gefilterd.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (selectedSorteerNaam === "za") {
+    gefilterd.sort((a, b) => b.name.localeCompare(a.name));
+  }
+
+    //Sorteerfunctie op base stats
+    if (selectedSorteerBaseStats === "baseStatsOplopend") {
+    gefilterd.sort((a, b) => a.basestats - b.basestats);
+  } else if (selectedSorteerBaseStats === "baseStatsAflopend") {
+    gefilterd.sort((a, b) => b.basestats - a.basestats);
+  }
+
     renderPokemons(gefilterd);
   }
 
@@ -181,5 +199,7 @@ async function geefPokemonWeer() {
   zoekbalk.addEventListener('input', applyFilters);
   typeFilter.addEventListener('change', applyFilters);
   baseStatsFilter.addEventListener('change', applyFilters);
+  sorteerNaam.addEventListener('change', applyFilters);
+  sorteerBaseStats.addEventListener('change', applyFilters);
 }
 geefPokemonWeer();

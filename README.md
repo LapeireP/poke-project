@@ -20,3 +20,5 @@ HTML5, CSS3 en JavaScript
 - Youtube filmpje over favorieten functionaliteit en localstorage: https://www.youtube.com/watch?v=DQ5VjITsmfg
 - Info over custom CSS properties: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 - Youtube filmpje over het maken van een thema switch: https://www.youtube.com/watch?v=EORgld8vLrY
+- Info over localeCompare: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
+- Info over sort: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort

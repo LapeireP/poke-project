@@ -13,9 +13,10 @@ body {
 }
 
 main {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   padding: 20px;
+  background-color: rgba(159, 0, 0, 0.237);
 }
 
 h1 {
@@ -60,29 +61,27 @@ button, input, select {
 
 .zoekbalk {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  justify-content:space-evenly;
+  flex-wrap: wrap;
 }
 
 #zoek-input {
-  width: 60%;
-  padding: 10px;
+  width: 100%;
+  padding: 0.6em;
   font-size: 1rem;
   background-color: var(--knoppen);
+  margin-bottom: 0.5em;
 }
 
 input::placeholder{
   color: var(--knoppentekstkleur);
 }
 
-#baseStatsFilter, #zoekknop {
-  padding: 1em;
+#baseStatsFilter, #sorteer-naam, #sorteer-baseStats, #type-filter {
   font-size: 1rem;
   background-color: var(--knoppen);
-}
-
-#type-filter {
-  background-color: var(--knoppen);
+  padding: 0.4em;
+  margin-bottom: 0.5em;
 }
 
 .titelAfbeelding {
@@ -128,6 +127,8 @@ input::placeholder{
   top: 0;
   z-index: 10;
   border-radius: 0.5em;
+  margin-bottom: 1em;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.315);
 }
 
 .pokemon-kaart img {
@@ -195,7 +196,7 @@ div>img {
 }
 
   .pokemon-kaart .pokemon-kaartinfo h3.kenmerkjs {
-    display:block;
+    display: block;
   }
 
   .pokemon-kaart .pokemon-kaartinfo .kenmerkfavo {
@@ -215,10 +216,29 @@ div>img {
   position: relative;
 }
 
+.pokemon-lijst .pokemon-kaart {
+  width: 49%;
+}
+
+.pokemon-lijst {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .favorietenknop {
   position: absolute;
   top: 40%;
   left: 5%;
+}
+
+#favorieten-lijst {
+  display: flex;
+  justify-content: space-around;
+}
+
+#favorieten-lijst .pokemon-kaart{
+  max-width: 49%;
 }
 
 }
