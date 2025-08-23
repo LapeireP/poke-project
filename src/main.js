@@ -1,4 +1,4 @@
-import { fetchPokemonData } from '/api/pokeapi.js';
+import { fetchPokemonData } from '/src/api/pokeapi.js';
 
 /* Testje of de data in de console wordt gezet
 async function testFetchData() {
@@ -24,6 +24,19 @@ function wisselThema() {
   document.documentElement.setAttribute('data-theme', nieuwThema);
   localStorage.setItem('thema', nieuwThema);
 }
+
+//MutationObserver voor het wisselen van thema
+const body = document.documentElement;
+
+const observer = new MutationObserver((mutationsLijst) => {
+  for (const mutation of mutationsLijst) {
+    if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+      console.log('Thema gewijzigd naar:', body.getAttribute('data-theme'));
+    }
+  }
+});
+
+observer.observe(body, { attributes: true });
 
 // Eventlistener voor themaschakelaar
 document.getElementById('themaschakelaar').addEventListener('click', wisselThema);
@@ -203,3 +216,30 @@ async function geefPokemonWeer() {
   sorteerBaseStats.addEventListener('change', applyFilters);
 }
 geefPokemonWeer();
+
+
+//Toevoegen aan favorieten via ID-functionaliteit + formulier validatie controle
+document.addEventListener('DOMContentLoaded', () => {
+  const pokemonFormulier = document.getElementById('pokemon-formulier');
+  const pokemonInput = document.getElementById('pokemon-id');
+  const foutmelding = document.getElementById('formulier-fout');
+
+  if (pokemonFormulier) {
+    pokemonFormulier.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const waarde = Number(pokemonInput.value);
+
+      if (!waarde || waarde < 1 || waarde > 151) {
+        foutmelding.textContent = "Voer een geldige Pokémon ID in van de eerste generatie.";
+        foutmelding.style.display = "block";
+        return;
+      }
+
+      foutmelding.style.display = "none";
+
+      toggleFavoriet(waarde);
+      pokemonInput.value = "";
+    });
+  }
+});

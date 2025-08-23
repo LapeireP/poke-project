@@ -22,3 +22,6 @@ HTML5, CSS3 en JavaScript
 - Youtube filmpje over het maken van een thema switch: https://www.youtube.com/watch?v=EORgld8vLrY
 - Info over localeCompare: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
 - Info over sort: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+- Info over MutationObserver: https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
+- Info over JavaScript form validatie: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation
+- Info over DOMContentLoaded event: https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event

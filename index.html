@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/webp" href="/images/Poke_Ball.webp" />
+    <link rel="icon" type="image/webp" href="/public/images/Poke_Ball.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poké-Project</title>
     <link rel="stylesheet" href="/src/style.css">
@@ -13,7 +13,7 @@
     <button id="themaschakelaar">Wijzig thema</button>
     </div>
     <div class="titelAfbeelding">
-    <img class="pokeball" src="/images/Poke_Ball.webp" alt="Pokéball">
+    <img class="pokeball" src="/public/images/Poke_Ball.webp" alt="Pokéball">
     <h1>Pokémon Explorer</h1>
     </div>
     <div class="zoekbalk">
@@ -64,6 +64,15 @@
     <div class="favo">
             <h2>Favorieten</h2>
         <div id="favorieten-lijst"></div>
+        <div class="toevoegen-formulier">
+            <h2>Voeg Pokémon toe via ID</h2>
+            <form id="pokemon-formulier">
+              <label for="pokemon-id">Pokémon ID (1-151):</label>
+              <input type="number" id="pokemon-id" name="pokemon-id" required>
+              <button type="submit">Voeg toe</button>
+              <p id="formulier-fout"></p>
+          </form>
+        </div>
         </div>
 
         <div class="pokemon-kaart">
@@ -85,7 +94,9 @@
     <div class="pokemon-lijst" id="pokemon-lijst">
     </div>
     </main>
-
+    <footer>
+      <p>Pär Lapeire - Werktraject - 2025</p>
+    </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
