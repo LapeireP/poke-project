@@ -7,16 +7,16 @@ Ik heb gekozen om voor het vak Web Advanced een interactieve single-page webappl
 De applicatie zorgt ervoor dat gebruikers de volgende zaken kunnen doen:
 - weergeven van de Pokémon van de eerste generatie in een lijst met een aantal kenmerken (normal sprite, shiny sprite, ID, naam, type1, type2, base stats en ability).
 - opzoeken van Pokémon via een zoekbalk. De Pokémon worden gefilterd terwijl je in de zoekbalk typt.
-- filteren van Pokémon op type. Bij het aanduiden van een type wordt zowel type1 als type2 bekeken.
-- filteren van Pokémon op base stats.
-- sorteren van Pokémon op naam, namelijk alfabetisch of omgekeerd alfabetisch.
-- Sorteren van Pokémon op base stats, namelijk oplopend of aflopend.
-- toevoegen van een Pokémon aan een lijst met favorieten. Dit kan op twee manieren: door op het favorieten-icoon te klikken bij de gewenste Pokémon in de lijst of door een geldige Pokémon-ID in te geven in het daarvoor voorziene veld in de lijst met favorieten.
-- veranderen van 'licht'-thema naar 'donker'-thema en omgekeerd. De knop hiervoor, bevindt zich bovenaan de applicatie. Wanneer een verandering aan het thema plaatsvindt, wordt dit in de console gezet door middel van een MutationObserver.
+- filteren van Pokémon op type via een uitklapmenu. Bij het aanduiden van een type wordt zowel type1 als type2 bekeken.
+- filteren van Pokémon op base stats via een uitklapmenu. Er wordt gewerkt met een bereik van 100 stat points.
+- sorteren van Pokémon op naam via een uitklapmenu, namelijk alfabetisch of omgekeerd alfabetisch.
+- sorteren van Pokémon op base stats via een uitklapmenu, namelijk oplopend of aflopend.
+- toevoegen van een Pokémon aan een lijst met favorieten. Dit kan op twee manieren: door op het favorieten-icoon te klikken bij de gewenste Pokémon in de lijst of door een geldige Pokémon-ID in te geven in het daarvoor voorziene veld in de lijst met favorieten. Indien een ongeldige ID wordt ingegeven, verschijnt een foutmelding.
+- veranderen van 'licht'-thema naar 'donker'-thema en omgekeerd. De knop hiervoor, bevindt zich rechtsbovenaan de applicatie. Wanneer een verandering aan het thema plaatsvindt, wordt dit in de console gezet door middel van een MutationObserver.
 - de applicatie zowel op een groot scherm als op een klein scherm kunnen gebruiken door middel van media queries. Het geheel is responsief en heeft een gebruiksvriendelijke en visueel aantrekkelijke interface.
 
 ## Info gebruikte frameworks:
-Het project is gebouwd met Vite en gebruikt HTML5, CSS3 en JavaScript. Daarnaast wordt de info over Pokémon opgehaald van pokeapi.co.
+Het project is gebouwd met Vite en gebruikt HTML5, CSS3 en JavaScript. Daarnaast wordt de info over Pokémon opgehaald van de volgende API: pokeapi.co.
 
 ## Implementatie technische vereisten bij JavaScript:
 - Elementen selecteren: lijn 42, 76, 102, 108, 134, 141-145 en 223-225
@@ -61,13 +61,21 @@ OF
 5. Kopieer daarna de url in de browser.
 
 ## Screenshots:
+- Hoofdscherm van de applicatie
 ![Hoofdscherm van de applicatie](/docs/screenshots/Screenshot1.png)
-![Hoofdscherm in dokere modus](/docs/screenshots/Screenshot2.png)
-![Weergave van de eigenschappen van de Pokémon via flexbox-principe en legende wordt sticky weergegeven als je naar beneden scrolt](/docs/screenshots/Screenshot3.png)
+- Hoofdscherm in donkere modus
+![Hoofdscherm in donkere modus](/docs/screenshots/Screenshot2.png)
+- Weergave van de eigenschappen van de Pokémon via flexbox-principe en legende wordt sticky weergegeven als je naar beneden scrolt
+![Weergave van de eigenschappen van de Pokémon](/docs/screenshots/Screenshot3.png)
+- Pokémon in favorietenlijst
 ![Pokémon in favorietenlijst](/docs/screenshots/Screenshot4.png)
+- Opzoeken van Pokémon
 ![Opzoeking van Pokémon](/docs/screenshots/Screenshot5.png)
+- Weergave op klein scherm
 ![Weergave op kleine schermen](/docs/screenshots/Screenshot6.png)
+- Fout bij opgeven van foutieve Pokémon ID
 ![Ingeven van foutieve Pokémon ID en formulier validatie](/docs/screenshots/Screenshot7.png)
+- Alfabetisch sorteren in donkere modus op een klein scherm
 ![Alfabetisch sorteren in donkere modus op klein scherm](/docs/screenshots/Screenshot8.png)
 
 ## Bronvermelding:
