@@ -1,7 +1,9 @@
-# Introductie:
+# Pokémon Explorer
+
+## Introductie:
 Ik heb gekozen om voor het vak Web Advanced een interactieve single-page webapplicatie uit te werken rond de eerste Pokémon-generatie.
 
-# Projectbeschrijving:
+## Projectbeschrijving:
 De applicatie zorgt ervoor dat gebruikers de volgende zaken kunnen doen:
 - weergeven van de Pokémon van de eerste generatie in een lijst met een aantal kenmerken (normal sprite, shiny sprite, ID, naam, type1, type2, base stats en ability).
 - opzoeken van Pokémon via een zoekbalk. De Pokémon worden gefilterd terwijl je in de zoekbalk typt.
@@ -13,10 +15,10 @@ De applicatie zorgt ervoor dat gebruikers de volgende zaken kunnen doen:
 - veranderen van 'licht'-thema naar 'donker'-thema en omgekeerd. De knop hiervoor, bevindt zich bovenaan de applicatie. Wanneer een verandering aan het thema plaatsvindt, wordt dit in de console gezet door middel van een MutationObserver.
 - de applicatie zowel op een groot scherm als op een klein scherm kunnen gebruiken door middel van media queries. Het geheel is responsief en heeft een gebruiksvriendelijke en visueel aantrekkelijke interface.
 
-# Info gebruikte frameworks:
-HTML5, CSS3 en JavaScript
+## Info gebruikte frameworks:
+Het project is gebouwd met Vite en gebruikt HTML5, CSS3 en JavaScript. Daarnaast wordt de info over Pokémon opgehaald van pokeapi.co.
 
-# Implementatie technische vereisten bij JavaScript:
+## Implementatie technische vereisten bij JavaScript:
 - Elementen selecteren: lijn 42, 76, 102, 108, 134, 141-145 en 223-225
 - Elementen manipulieren: lijn 18, 24, 78-99, 117-132, 234-235, 239 en 242.
 - Events aan elementen koppelen: lijn 42, 102-103, 134-135, 212-216 en 228-243.
@@ -38,13 +40,37 @@ HTML5, CSS3 en JavaScript
 - Formulier validatie: lijn 223-245.
 - Gebruik van LocalStorage: lijn 17, 25, 51 en 56.
 
-
-# Implementatie technische vereisten bij HTML/CSS:
+## Implementatie technische vereisten bij HTML/CSS:
 - Basis HTML layout (flexbox): lijn 159-164 en 275-279.
 - Basis CSS: Dit is terug te vinden in het hele CSS-bestand. Ik heb een Google Font gebruikt als lettertype en het flexbox-principe toegepast op verschillende plaatsen. Daarnaast werden media queries ingesteld om de applicatie zowel op een groot scherm als op een kleiner scherm correct weer te geven.
 - Gebruiksvriendelijke elementen: De favorietenknop, wijzig-themaknop en uitklapmenu's om te sorteren en filteren.
 
-# Bronvermelding:
+## Handleiding om lokaal te draaien:
+1. Zet het project in een map op uw computer.
+2. Navigeer met Terminal naar de map via: cd "locate_van_de_map".
+3. Installeer de dependencies met: npm install.
+4. Om het lokaal te draaien in de dev server, geef je het volgende in in Terminal: npm run dev.
+5. Kopieer daarna de url in de browser.
+
+OF
+
+1. Zet het project in een map op uw computer.
+2. Navigeer met Terminal naar de map via: cd "locate_van_de_map".
+3. Installeer de dependencies met: npm install.
+4. Om de build lokaal te draaien, geef je het volgende in in Terminal: npm run preview.
+5. Kopieer daarna de url in de browser.
+
+## Screenshots:
+![Hoofdscherm van de applicatie](/docs/screenshots/Screenshot1.png)
+![Hoofdscherm in dokere modus](/docs/screenshots/Screenshot2.png)
+![Weergave van de eigenschappen van de Pokémon via flexbox-principe en legende wordt sticky weergegeven als je naar beneden scrolt](/docs/screenshots/Screenshot3.png)
+![Pokémon in favorietenlijst](/docs/screenshots/Screenshot4.png)
+![Opzoeking van Pokémon](/docs/screenshots/Screenshot5.png)
+![Weergave op kleine schermen](/docs/screenshots/Screenshot6.png)
+![Ingeven van foutieve Pokémon ID en formulier validatie](/docs/screenshots/Screenshot7.png)
+![Alfabetisch sorteren in donkere modus op klein scherm](/docs/screenshots/Screenshot8.png)
+
+## Bronvermelding:
 - Cursus Web Essentials (Erasmushogeschool)
 - Cursus Programming Essentials I (Erasmushogeschool)
 - Cursus Web Advanced (Erasmushogeschool)
@@ -64,3 +90,4 @@ HTML5, CSS3 en JavaScript
 - Info over JavaScript form validatie: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation
 - Info over DOMContentLoaded event: https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
 - Info over array iteratie: https://stackoverflow.com/questions/3010840/loop-through-an-array-in-javascript
+- ChatGPT chatlog: https://chatgpt.com/share/68ab1662-0454-8005-9ffe-6752310d59af
