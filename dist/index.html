@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/webp" href="/assets/Poke_Ball-DLvYj19I.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poké-Project</title>
+    <script type="module" crossorigin src="/assets/index-B79xYDtn.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BWe3Hb3A.css">
+  </head>
+  <body>
+    <main>
+    <div class="instellingen">
+    <button id="themaschakelaar">Wijzig thema</button>
+    </div>
+    <div class="titelAfbeelding">
+    <img class="pokeball" src="/assets/Poke_Ball-DLvYj19I.webp" alt="Pokéball">
+    <h1>Pokémon Explorer</h1>
+    </div>
+    <div class="zoekbalk">
+      <input type="text" id="zoek-input" placeholder="Zoek Pokémon..." />
+      <select id="sorteer-naam">
+        <option value="">Sorteer op naam</option>
+        <option value="az">Naam A → Z</option>
+        <option value="za">Naam Z → A</option>
+      </select>
+      <select id="sorteer-baseStats">
+        <option value="">Sorteer op base stats</option>
+        <option value="baseStatsOplopend">Base stats oplopend</option>
+        <option value="baseStatsAflopend">Base stats aflopend</option>
+      </select>
+      <select id="baseStatsFilter">
+        <option value="">Alle base stats</option>
+        <option value="0-100">0-100</option>
+        <option value="101-200">101-200</option>
+        <option value="201-300">201-300</option>
+        <option value="301-400">301-400</option>
+        <option value="401-500">401-500</option>
+        <option value="501-600">501-600</option>
+        <option value="601-700">601-700</option>
+      </select>
+      <select id="type-filter">
+        <option value="">Alle types</option>
+        <option value="grass">Grass</option>
+        <option value="fire">Fire</option>
+        <option value="water">Water</option>
+        <option value="electric">Electric</option>
+        <option value="ice">Ice</option>
+        <option value="fighting">Fighting</option>
+        <option value="poison">Poison</option>
+        <option value="ground">Ground</option>
+        <option value="flying">Flying</option>
+        <option value="psychic">Psychic</option>
+        <option value="bug">Bug</option>
+        <option value="rock">Rock</option>
+        <option value="ghost">Ghost</option>
+        <option value="dragon">Dragon</option>
+        <option value="dark">Dark</option>
+        <option value="steel">Steel</option>
+        <option value="fairy">Fairy</option>
+        <option value="normal">Normal</option>
+      </select>
+    </div>
+
+    <div class="favo">
+            <h2>Favorieten</h2>
+        <div id="favorieten-lijst"></div>
+        <div class="toevoegen-formulier">
+            <h2>Voeg Pokémon toe via ID</h2>
+            <form id="pokemon-formulier">
+              <label for="pokemon-id">Pokémon ID (1-151):</label>
+              <input type="number" id="pokemon-id" name="pokemon-id" required>
+              <button type="submit">Voeg toe</button>
+              <p id="formulier-fout"></p>
+          </form>
+        </div>
+        </div>
+
+        <div class="pokemon-kaart">
+        <h2>Alle Pokémon</h2>
+        <div class="sticky">
+        <div class="pokemon-kaartinfo">
+          <h3 class="kenmerk">Add ♥</h3>
+          <h3 class="kenmerk">Normal</h3>
+          <h3 class="kenmerk">Shiny</h3>
+          <h3 class="kenmerk">ID</h3>
+          <h3 class="kenmerk">Name</h3>
+          <h3 class="kenmerk">Type 1</h3>
+          <h3 class="kenmerk">Type 2</h3>
+          <h3 class="kenmerk">Base stats</h3>
+          <h3 class="kenmerk">Ability</h3>
+          </div>
+        </div>
+
+    <div class="pokemon-lijst" id="pokemon-lijst">
+    </div>
+    </main>
+    <footer>
+      <p>Pär Lapeire - Werktraject - 2025</p>
+    </footer>
+  </body>
+</html>
