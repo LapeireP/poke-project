@@ -57,7 +57,7 @@ OF
 1. Zet het project in een map op uw computer.
 2. Navigeer met Terminal naar de map via: cd "locate_van_de_map".
 3. Installeer de dependencies met: npm install.
-4. Om het lokaal te draaien * *in de dev server* *, geef je het volgende in in Terminal: npm run dev.
+4. Om het lokaal te draaien *in de dev server*, geef je het volgende in in Terminal: npm run dev.
 5. Kopieer daarna de url in de browser.
 
 ## Screenshots:
