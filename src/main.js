@@ -1,3 +1,5 @@
+'use strict';
+
 import { fetchPokemonData } from '/src/api/pokeapi.js';
 
 /* Testje of de data in de console wordt gezet

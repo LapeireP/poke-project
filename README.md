@@ -49,7 +49,7 @@ Het project is gebouwd met Vite en gebruikt HTML5, CSS3 en JavaScript. Daarnaast
 1. Zet het project in een map op uw computer.
 2. Navigeer met Terminal naar de map via: cd "locate_van_de_map".
 3. Installeer de dependencies met: npm install.
-4. Om het lokaal te draaien in de dev server, geef je het volgende in in Terminal: npm run dev.
+4. Om de build lokaal te draaien, geef je het volgende in in Terminal: npm run preview.
 5. Kopieer daarna de url in de browser.
 
 OF
@@ -57,7 +57,7 @@ OF
 1. Zet het project in een map op uw computer.
 2. Navigeer met Terminal naar de map via: cd "locate_van_de_map".
 3. Installeer de dependencies met: npm install.
-4. Om de build lokaal te draaien, geef je het volgende in in Terminal: npm run preview.
+4. Om het lokaal te draaien * *in de dev server* *, geef je het volgende in in Terminal: npm run dev.
 5. Kopieer daarna de url in de browser.
 
 ## Screenshots:
@@ -98,4 +98,5 @@ OF
 - Info over JavaScript form validatie: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation
 - Info over DOMContentLoaded event: https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
 - Info over array iteratie: https://stackoverflow.com/questions/3010840/loop-through-an-array-in-javascript
+- Info over opstellen README: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 - ChatGPT chatlog: https://chatgpt.com/share/68ab1662-0454-8005-9ffe-6752310d59af
